@@ -46,6 +46,13 @@ Followed by structured sections: **Summary**, **Syntax / Usage**, **Details**,
 
 ---
 
+## Site
+
+The cards are also published as a browsable site at `https://zinit.turbobasic.dev`.
+See [`site/README.md`][site-readme] for build, development, and deployment instructions.
+
+---
+
 ## For AI harnesses
 
 See [`docs/ai-instructions.md`][ai-instructions] for the full card schema, generation
@@ -79,6 +86,7 @@ for all AI tooling working with this repository.
 [zinit-recipes]:     https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs
 [zinit-annexes]:     https://github.com/zdharma-continuum/zinit/wiki/Zinit-related-projects
 [ai-instructions]:   docs/ai-instructions.md
+[site-readme]:       site/README.md
 [dir-ices]:          cards/ices/
 [dir-commands]:      cards/commands/
 [dir-concepts]:      cards/concepts/

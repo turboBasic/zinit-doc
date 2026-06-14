@@ -7,16 +7,40 @@ for Zsh. The primary deliverable is a collection of ~500 Knowledge Cards coverin
 aspect of Zinit: ices, commands, concepts, annexes, packages, recipes, and real-world
 troubleshooting patterns extracted from issues and discussions.
 
-The Knowledge Cards are the sole output. This is not a code project — there are no
-executables, no tests, no build step.
+The Knowledge Cards are the primary output. A companion static site built with
+[Astro/Starlight](https://starlight.astro.build) renders the browsable sections
+(ices, commands, concepts, annexes, packages, recipes) at
+`https://zinit.turbobasic.dev`. The troubleshooting, installation, and
+migration sections exist in `cards/` for RAG use only and are not included in the site.
+The site source lives in `site/` and is deployed to Cloudflare Pages.
 
 ---
 
 ## Tech Stack
 
-- **Format:** YAML front-matter + Markdown body (one `.md` file per card)
+- **Cards:** YAML front-matter + Markdown body (one `.md` file per card)
 - **Consumption:** Designed for both RAG/vector-search and direct context injection
+- **Site:** Astro + Starlight (`site/`); card directories symlinked into `site/src/content/docs/`
+- **Deployment:** Cloudflare Pages, built from `site/` on push to `main`
 - **Tooling:** AI agents generating cards from source materials listed below
+
+---
+
+## Tooling
+
+All tools are managed by `mise` (pinned in `mise.toml`): Node 26, Just, Wrangler.
+Always invoke them via `mise exec -- <tool>` to ensure the pinned versions are used:
+
+```sh
+mise exec -- just <recipe>       # run any justfile recipe
+mise exec -- wrangler <command>  # direct Wrangler invocations
+```
+
+---
+
+## Site
+
+Build, development, and deployment instructions live in [`site/README.md`](../site/README.md).
 
 ---
 
@@ -47,15 +71,22 @@ zinit-doc/
 ├── docs/
 │   └── ai-instructions.md       ← this file — single source of truth for all AI tools
 ├── cards/                       ← all Knowledge Cards live here
-│   ├── ices/                    ← ice modifiers (wait'', lucid, from'gh-r', etc.)
+│   ├── ices/                    ← ice modifiers (wait, lucid, from'gh-r', etc.)
 │   ├── commands/                ← zi commands (load, light, snippet, update, etc.)
 │   ├── concepts/                ← architecture and concepts (turbo mode, annexes, etc.)
 │   ├── annexes/                 ← per-annex cards
 │   ├── packages/                ← zinit-packages cards
 │   ├── recipes/                 ← popular program recipes
-│   ├── troubleshooting/         ← patterns from issues and discussions
-│   ├── installation/            ← install, bootstrap, update, uninstall flows
-│   └── migration/               ← migration from other plugin managers
+│   ├── troubleshooting/         ← RAG only: patterns from issues and discussions
+│   ├── installation/            ← RAG only: install, bootstrap, update, uninstall flows
+│   └── migration/               ← RAG only: migration from other plugin managers
+├── site/                        ← Astro/Starlight site
+│   ├── astro.config.mjs
+│   ├── src/
+│   │   ├── components/          ← custom Starlight component overrides
+│   │   ├── content/docs/        ← symlinks to cards/ subdirs (site sections only)
+│   │   └── pages/index.astro    ← home page
+│   └── package.json
 └── .editorconfig
 ```
 
