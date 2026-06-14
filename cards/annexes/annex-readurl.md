@@ -1,6 +1,6 @@
 ---
 id: annex-readurl
-title: "Annex: readurl"
+title: "readurl"
 category: annexes
 tags: [annex, ice, binary, snippet, installation]
 source: https://github.com/zdharma-continuum/zinit-annex-readurl

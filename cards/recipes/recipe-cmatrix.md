@@ -1,6 +1,6 @@
 ---
 id: recipe-cmatrix
-title: "Recipe: cmatrix"
+title: "cmatrix"
 category: recipes
 tags: [recipe, command, installation, binary]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

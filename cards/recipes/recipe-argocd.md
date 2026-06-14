@@ -1,6 +1,6 @@
 ---
 id: recipe-argocd
-title: "Recipe: argo cd"
+title: "argo cd"
 category: recipes
 tags: [recipe, binary, completion, command, git, installation]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

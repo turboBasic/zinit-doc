@@ -1,6 +1,6 @@
 ---
 id: pkg-github-issues
-title: "Package: github-issues"
+title: "github-issues"
 category: packages
 tags: [package, plugin, git, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

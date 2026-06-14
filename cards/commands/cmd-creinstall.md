@@ -1,6 +1,6 @@
 ---
 id: cmd-creinstall
-title: "Command: zi creinstall"
+title: "zi creinstall"
 category: commands
 tags: [command, completion, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

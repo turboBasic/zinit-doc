@@ -1,6 +1,6 @@
 ---
 id: cp
-title: "Ice: cp''"
+title: "cp"
 category: ices
 tags: [ice, command, binary, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

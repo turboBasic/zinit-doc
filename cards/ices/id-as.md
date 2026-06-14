@@ -1,6 +1,6 @@
 ---
 id: id-as
-title: "Ice: id-as''"
+title: "id-as"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

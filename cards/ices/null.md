@@ -1,6 +1,6 @@
 ---
 id: "null"
-title: "Ice: as'null'"
+title: "as'null'"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,5 +1,5 @@
 ---
-id: zinit-init
+id: zinit-bootstrap
 title: Zinit Bootstrap and Initialization
 category: concepts
 tags: [installation, plugin]

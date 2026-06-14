@@ -1,6 +1,6 @@
 ---
 id: pkg-overview
-title: "Package: Overview"
+title: "Overview"
 category: packages
 tags: [package, ice, installation, recipe]
 source: https://github.com/zdharma-continuum/zinit-packages

@@ -1,6 +1,6 @@
 ---
 id: wait
-title: "Ice: wait''"
+title: "wait"
 category: ices
 tags: [ice, turbo, lazy-loading, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

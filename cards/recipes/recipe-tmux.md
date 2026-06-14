@@ -1,6 +1,6 @@
 ---
 id: recipe-tmux
-title: "Recipe: tmux and tmux-mem-cpu-load"
+title: "tmux and tmux-mem-cpu-load"
 category: recipes
 tags: [recipe, command, installation, binary]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

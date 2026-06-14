@@ -1,6 +1,6 @@
 ---
 id: pkg-firefox-dev
-title: "Package: firefox-dev"
+title: "firefox-dev"
 category: packages
 tags: [package, binary, command, snippet, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

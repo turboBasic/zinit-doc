@@ -1,6 +1,6 @@
 ---
 id: extract
-title: "Ice: extract''"
+title: "extract"
 category: ices
 tags: [ice, binary, annex, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

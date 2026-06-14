@@ -1,6 +1,6 @@
 ---
 id: subst
-title: "Ice: subst''"
+title: "subst"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

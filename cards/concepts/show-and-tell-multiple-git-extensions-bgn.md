@@ -1,5 +1,5 @@
 ---
-id: pattern-git-extensions-bgn
+id: show-and-tell-multiple-git-extensions-bgn
 title: "Show & Tell: Multiple git extension tools loaded in turbo with sbin shims"
 category: concepts
 tags: [binary, annex, turbo, git, performance]

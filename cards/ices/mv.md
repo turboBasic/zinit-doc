@@ -1,6 +1,6 @@
 ---
 id: mv
-title: "Ice: mv''"
+title: "mv"
 category: ices
 tags: [ice, command, binary, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

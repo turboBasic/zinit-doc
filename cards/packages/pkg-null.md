@@ -1,6 +1,6 @@
 ---
 id: pkg-null
-title: "Package: null"
+title: "null"
 category: packages
 tags: [package, recipe, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

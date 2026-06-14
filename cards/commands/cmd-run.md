@@ -1,6 +1,6 @@
 ---
 id: cmd-run
-title: "Command: zi run"
+title: "zi run"
 category: commands
 tags: [command, plugin, binary]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

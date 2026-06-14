@@ -1,6 +1,6 @@
 ---
 id: cmd-report
-title: "Command: zi report"
+title: "zi report"
 category: commands
 tags: [command, plugin, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

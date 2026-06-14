@@ -1,6 +1,6 @@
 ---
 id: cmd-cenable
-title: "Command: zi cenable"
+title: "zi cenable"
 category: commands
 tags: [command, completion]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: reset
-title: "Ice: reset''"
+title: "reset"
 category: ices
 tags: [ice, git, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

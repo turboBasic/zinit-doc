@@ -1,6 +1,6 @@
 ---
 id: pkg-asciidoctor
-title: "Package: asciidoctor"
+title: "asciidoctor"
 category: packages
 tags: [package, annex, binary, command, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

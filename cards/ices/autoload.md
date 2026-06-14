@@ -1,6 +1,6 @@
 ---
 id: autoload
-title: "Ice: autoload''"
+title: "autoload"
 category: ices
 tags: [ice, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: cmd-compinit
-title: "Command: zi compinit"
+title: "zi compinit"
 category: commands
 tags: [command, completion]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

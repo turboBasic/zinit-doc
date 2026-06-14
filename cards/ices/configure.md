@@ -1,6 +1,6 @@
 ---
 id: configure
-title: "Ice: configure''"
+title: "configure"
 category: ices
 tags: [ice, plugin, binary]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

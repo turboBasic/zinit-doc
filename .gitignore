@@ -1,3 +1,9 @@
 .DS_Store
 *.swp
 *.swo
+site/node_modules/
+site/dist/
+site/.astro/
+site/src/assets/houston.webp
+site/.vscode/
+.wrangler/

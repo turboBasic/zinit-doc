@@ -1,6 +1,6 @@
 ---
 id: cmd-env-whitelist
-title: "Command: zi env-whitelist"
+title: "zi env-whitelist"
 category: commands
 tags: [command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

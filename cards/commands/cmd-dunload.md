@@ -1,6 +1,6 @@
 ---
 id: cmd-dunload
-title: "Command: zi dunload"
+title: "zi dunload"
 category: commands
 tags: [command, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

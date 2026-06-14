@@ -1,6 +1,6 @@
 ---
 id: completions
-title: "Ice: completions''"
+title: "completions"
 category: ices
 tags: [ice, completion, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

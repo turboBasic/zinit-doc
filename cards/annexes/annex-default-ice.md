@@ -1,6 +1,6 @@
 ---
 id: annex-default-ice
-title: "Annex: default-ice"
+title: "default-ice"
 category: annexes
 tags: [annex, ice, turbo]
 source: https://github.com/zdharma-continuum/zinit-annex-default-ice

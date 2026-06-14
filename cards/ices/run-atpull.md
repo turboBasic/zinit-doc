@@ -1,6 +1,6 @@
 ---
 id: run-atpull
-title: "Ice: run-atpull''"
+title: "run-atpull"
 category: ices
 tags: [ice, git, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: cmd-glance
-title: "Command: zi glance"
+title: "zi glance"
 category: commands
 tags: [command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

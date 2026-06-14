@@ -1,6 +1,6 @@
 ---
 id: cmd-srv
-title: "Command: zi srv"
+title: "zi srv"
 category: commands
 tags: [command, annex]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: aliases
-title: "Ice: aliases''"
+title: "aliases"
 category: ices
 tags: [ice, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

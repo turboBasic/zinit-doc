@@ -1,6 +1,6 @@
 ---
 id: pkg-zsh-static
-title: "Package: zsh-static"
+title: "zsh-static"
 category: packages
 tags: [package, binary, command, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

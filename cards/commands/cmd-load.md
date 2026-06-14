@@ -1,6 +1,6 @@
 ---
 id: cmd-load
-title: "Command: zi load"
+title: "zi load"
 category: commands
 tags: [command, plugin, installation]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

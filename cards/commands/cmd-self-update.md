@@ -1,6 +1,6 @@
 ---
 id: cmd-self-update
-title: "Command: zi self-update"
+title: "zi self-update"
 category: commands
 tags: [command, installation, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

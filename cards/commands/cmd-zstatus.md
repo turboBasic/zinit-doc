@@ -1,6 +1,6 @@
 ---
 id: cmd-zstatus
-title: "Command: zi zstatus"
+title: "zi zstatus"
 category: commands
 tags: [command, troubleshooting, installation]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

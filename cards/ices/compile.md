@@ -1,6 +1,6 @@
 ---
 id: compile
-title: "Ice: compile''"
+title: "compile"
 category: ices
 tags: [ice, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

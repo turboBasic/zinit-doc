@@ -1,6 +1,6 @@
 ---
 id: silent
-title: "Ice: silent''"
+title: "silent"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

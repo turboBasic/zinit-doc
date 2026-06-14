@@ -1,5 +1,5 @@
 ---
-id: pattern-turbo-omz-m1-mac
+id: show-and-tell-full-turbo-omz-m1-mac
 title: "Show & Tell: Full turbo .zshrc with OMZ libs on Apple Silicon"
 category: concepts
 tags: [turbo, snippet, completion, plugin, performance]

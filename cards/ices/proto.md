@@ -1,6 +1,6 @@
 ---
 id: proto
-title: "Ice: proto''"
+title: "proto"
 category: ices
 tags: [ice, git, plugin, installation]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

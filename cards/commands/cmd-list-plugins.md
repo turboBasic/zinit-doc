@@ -1,6 +1,6 @@
 ---
 id: cmd-list-plugins
-title: "Command: zi list-plugins"
+title: "zi list-plugins"
 category: commands
 tags: [command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

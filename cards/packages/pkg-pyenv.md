@@ -1,6 +1,6 @@
 ---
 id: pkg-pyenv
-title: "Package: pyenv"
+title: "pyenv"
 category: packages
 tags: [package, command, binary, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

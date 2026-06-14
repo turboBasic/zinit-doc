@@ -1,6 +1,6 @@
 ---
 id: pkg-apr
-title: "Package: apr"
+title: "apr"
 category: packages
 tags: [package, binary, installation, snippet]
 source: https://github.com/zdharma-continuum/zinit-packages

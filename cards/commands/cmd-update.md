@@ -1,6 +1,6 @@
 ---
 id: cmd-update
-title: "Command: zi update"
+title: "zi update"
 category: commands
 tags: [command, plugin, snippet, git]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: cmd-compile
-title: "Command: zi compile"
+title: "zi compile"
 category: commands
 tags: [command, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

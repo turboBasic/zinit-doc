@@ -1,6 +1,6 @@
 ---
 id: cmd-cdreplay
-title: "Command: zi cdreplay"
+title: "zi cdreplay"
 category: commands
 tags: [command, completion, lazy-loading]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

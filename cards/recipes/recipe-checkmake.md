@@ -1,6 +1,6 @@
 ---
 id: recipe-checkmake
-title: "Recipe: checkmake"
+title: "checkmake"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

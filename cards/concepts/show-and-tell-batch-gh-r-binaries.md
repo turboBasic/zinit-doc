@@ -1,5 +1,5 @@
 ---
-id: pattern-gh-r-binaries-batch
+id: show-and-tell-batch-gh-r-binaries
 title: "Show & Tell: Batch-installing multiple gh-r binaries with sbin"
 category: concepts
 tags: [binary, annex, ice, installation, turbo]

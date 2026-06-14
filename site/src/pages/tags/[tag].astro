@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+export async function getStaticPaths() {
+  const allDocs = await getCollection('docs');
+  const tagMap: Record<string, typeof allDocs> = {};
+
+  for (const entry of allDocs) {
+    const tags: string[] = (entry.data as any).tags ?? [];
+    for (const tag of tags) {
+      if (!tagMap[tag]) tagMap[tag] = [];
+      tagMap[tag].push(entry);
+    }
+  }
+
+  return Object.entries(tagMap).map(([tag, entries]) => ({
+    params: { tag },
+    props: { tag, entries: entries.sort((a, b) => a.data.title.localeCompare(b.data.title)) },
+  }));
+}
+
+const { tag, entries } = Astro.props;
+---
+
+<StarlightPage frontmatter={{ title: `Tag: ${tag}`, description: `${entries.length} cards tagged "${tag}".` }}>
+  <p>{entries.length} cards tagged <strong>{tag}</strong>.</p>
+  <ul class="card-list">
+    {entries.map(entry => (
+      <li>
+        <a href={`/${entry.id}/`}>{entry.data.title}</a>
+        <span class="category">{entry.id.split('/')[0]}</span>
+      </li>
+    ))}
+  </ul>
+</StarlightPage>
+
+<style>
+  .card-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .card-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .card-list a {
+    color: var(--sl-color-text-accent);
+  }
+  .category {
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-4);
+    font-family: var(--sl-font-mono, monospace);
+  }
+</style>

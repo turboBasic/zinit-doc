@@ -1,6 +1,6 @@
 ---
 id: light-mode
-title: "Ice: light-mode''"
+title: "light-mode"
 category: ices
 tags: [ice, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

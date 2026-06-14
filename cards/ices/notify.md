@@ -1,6 +1,6 @@
 ---
 id: notify
-title: "Ice: notify''"
+title: "notify"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

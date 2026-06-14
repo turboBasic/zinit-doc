@@ -1,6 +1,6 @@
 ---
 id: recipe-fd
-title: "Recipe: fd"
+title: "fd"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

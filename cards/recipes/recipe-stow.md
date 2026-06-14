@@ -1,6 +1,6 @@
 ---
 id: recipe-stow
-title: "Recipe: stow"
+title: "stow"
 category: recipes
 tags: [recipe, command, installation]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

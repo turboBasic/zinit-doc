@@ -1,6 +1,6 @@
 ---
 id: pkg-github-issues-srv
-title: "Package: github-issues-srv"
+title: "github-issues-srv"
 category: packages
 tags: [package, plugin, git, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

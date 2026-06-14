@@ -1,6 +1,6 @@
 ---
 id: pkg-nb
-title: "Package: nb"
+title: "nb"
 category: packages
 tags: [package, binary, command, completion, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

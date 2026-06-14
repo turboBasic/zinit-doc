@@ -1,6 +1,6 @@
 ---
 id: blockf
-title: "Ice: blockf''"
+title: "blockf"
 category: ices
 tags: [ice, completion, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: cmd-cdclear
-title: "Command: zi cdclear"
+title: "zi cdclear"
 category: commands
 tags: [command, completion, migration]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

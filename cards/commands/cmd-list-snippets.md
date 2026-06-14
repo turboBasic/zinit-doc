@@ -1,6 +1,6 @@
 ---
 id: cmd-list-snippets
-title: "Command: zi list-snippets"
+title: "zi list-snippets"
 category: commands
 tags: [command, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

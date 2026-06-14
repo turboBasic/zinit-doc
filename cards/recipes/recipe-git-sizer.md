@@ -1,6 +1,6 @@
 ---
 id: recipe-git-sizer
-title: "Recipe: git-sizer"
+title: "git-sizer"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

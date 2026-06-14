@@ -1,6 +1,6 @@
 ---
 id: cmd-recall
-title: "Command: zi recall"
+title: "zi recall"
 category: commands
 tags: [command, ice, plugin, snippet, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

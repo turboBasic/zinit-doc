@@ -1,6 +1,6 @@
 ---
 id: cmd-dstart
-title: "Command: zi dstart / zi dtrace"
+title: "zi dstart / zi dtrace"
 category: commands
 tags: [command, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: cloneopts
-title: "Ice: cloneopts''"
+title: "cloneopts"
 category: ices
 tags: [ice, git, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

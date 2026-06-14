@@ -1,6 +1,6 @@
 ---
 id: lucid
-title: "Ice: lucid''"
+title: "lucid"
 category: ices
 tags: [ice, turbo, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

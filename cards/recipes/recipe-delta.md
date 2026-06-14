@@ -1,6 +1,6 @@
 ---
 id: recipe-delta
-title: "Recipe: delta"
+title: "delta"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

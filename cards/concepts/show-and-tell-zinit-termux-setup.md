@@ -1,5 +1,5 @@
 ---
-id: pattern-termux-zinit-setup
+id: show-and-tell-zinit-termux-setup
 title: "Show & Tell: zinit setup for Termux on Android"
 category: concepts
 tags: [installation, snippet, completion, turbo, plugin]

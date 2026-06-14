@@ -1,6 +1,6 @@
 ---
 id: subscribe
-title: "Ice: subscribe'' / on-update-of''"
+title: "subscribe / on-update-of"
 category: ices
 tags: [ice, lazy-loading, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

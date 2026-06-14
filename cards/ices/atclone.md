@@ -1,6 +1,6 @@
 ---
 id: atclone
-title: "Ice: atclone''"
+title: "atclone"
 category: ices
 tags: [ice, git, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

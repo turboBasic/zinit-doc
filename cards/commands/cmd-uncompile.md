@@ -1,6 +1,6 @@
 ---
 id: cmd-uncompile
-title: "Command: zi uncompile"
+title: "zi uncompile"
 category: commands
 tags: [command, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

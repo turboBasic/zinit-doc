@@ -1,6 +1,6 @@
 ---
 id: svn
-title: "Ice: svn''"
+title: "svn"
 category: ices
 tags: [ice, snippet, installation]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

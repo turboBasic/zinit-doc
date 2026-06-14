@@ -1,6 +1,6 @@
 ---
-id: pattern-annex-latest-release-754
-title: "Annex: zinit-annex-latest-release — pin to latest stable GitHub release"
+id: zinit-latest-release-annex
+title: "zinit-annex-latest-release — pin to latest stable GitHub release"
 category: concepts
 tags: [annex, ice, git, installation]
 source: https://github.com/zdharma-continuum/zinit/discussions/754

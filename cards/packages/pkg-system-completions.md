@@ -1,6 +1,6 @@
 ---
 id: pkg-system-completions
-title: "Package: system-completions"
+title: "system-completions"
 category: packages
 tags: [package, completion, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

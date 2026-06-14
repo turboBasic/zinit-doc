@@ -1,6 +1,6 @@
 ---
 id: cmd-recently
-title: "Command: zi recently"
+title: "zi recently"
 category: commands
 tags: [command, plugin, git]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

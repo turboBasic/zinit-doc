@@ -1,6 +1,6 @@
 ---
 id: annex-unscope
-title: "Annex: unscope"
+title: "unscope"
 category: annexes
 tags: [annex, plugin, installation]
 source: https://github.com/zdharma-continuum/zinit-annex-unscope

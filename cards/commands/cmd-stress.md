@@ -1,6 +1,6 @@
 ---
 id: cmd-stress
-title: "Command: zi stress"
+title: "zi stress"
 category: commands
 tags: [command, plugin, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

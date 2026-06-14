@@ -1,6 +1,6 @@
 ---
 id: pkg-svn
-title: "Package: svn"
+title: "svn"
 category: packages
 tags: [package, binary, command, installation, snippet]
 source: https://github.com/zdharma-continuum/zinit-packages

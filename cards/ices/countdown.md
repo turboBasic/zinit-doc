@@ -1,6 +1,6 @@
 ---
 id: countdown
-title: "Ice: countdown''"
+title: "countdown"
 category: ices
 tags: [ice, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

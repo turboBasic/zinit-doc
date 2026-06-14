@@ -1,6 +1,6 @@
 ---
 id: pkg-fzf
-title: "Package: fzf"
+title: "fzf"
 category: packages
 tags: [package, binary, command, completion, ice, annex]
 source: https://github.com/zdharma-continuum/zinit-packages

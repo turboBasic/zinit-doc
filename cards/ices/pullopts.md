@@ -1,6 +1,6 @@
 ---
 id: pullopts
-title: "Ice: pullopts''"
+title: "pullopts"
 category: ices
 tags: [ice, git, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

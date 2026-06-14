@@ -1,6 +1,6 @@
 ---
 id: recipe-mdbook
-title: "Recipe: mdBook"
+title: "mdBook"
 category: recipes
 tags: [recipe, binary, command, completion, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

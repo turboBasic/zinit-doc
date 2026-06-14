@@ -1,6 +1,6 @@
 ---
 id: bindmap
-title: "Ice: bindmap''"
+title: "bindmap"
 category: ices
 tags: [ice, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

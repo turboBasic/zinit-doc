@@ -1,6 +1,6 @@
 ---
 id: trigger-load
-title: "Ice: trigger-load''"
+title: "trigger-load"
 category: ices
 tags: [ice, lazy-loading, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

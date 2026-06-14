@@ -1,6 +1,6 @@
 ---
 id: cmd-light
-title: "Command: zi light"
+title: "zi light"
 category: commands
 tags: [command, plugin, installation, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

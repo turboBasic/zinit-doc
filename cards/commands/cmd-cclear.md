@@ -1,6 +1,6 @@
 ---
 id: cmd-cclear
-title: "Command: zi cclear"
+title: "zi cclear"
 category: commands
 tags: [command, completion, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

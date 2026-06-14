@@ -1,6 +1,6 @@
 ---
 id: reset-prompt
-title: "Ice: reset-prompt''"
+title: "reset-prompt"
 category: ices
 tags: [ice, turbo, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

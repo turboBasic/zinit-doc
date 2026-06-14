@@ -1,6 +1,6 @@
 ---
 id: pkg-ecs-cli
-title: "Package: ecs-cli"
+title: "ecs-cli"
 category: packages
 tags: [package, binary, command, snippet, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

@@ -1,6 +1,6 @@
 ---
 id: atpull
-title: "Ice: atpull''"
+title: "atpull"
 category: ices
 tags: [ice, git, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

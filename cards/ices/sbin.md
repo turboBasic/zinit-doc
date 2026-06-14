@@ -1,6 +1,6 @@
 ---
 id: sbin
-title: "Ice: sbin''"
+title: "sbin"
 category: ices
 tags: [ice, binary, annex]
 source: https://github.com/zdharma-continuum/zinit-annex-bin-gem-node

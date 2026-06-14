@@ -1,6 +1,6 @@
 ---
 id: sh-emulation
-title: "Ice: sh'' / bash'' / ksh'' / csh''"
+title: "sh / bash / ksh / csh"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

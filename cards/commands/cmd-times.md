@@ -1,6 +1,6 @@
 ---
 id: cmd-times
-title: "Command: zi times"
+title: "zi times"
 category: commands
 tags: [command, performance, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

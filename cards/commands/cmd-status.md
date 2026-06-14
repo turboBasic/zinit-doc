@@ -1,6 +1,6 @@
 ---
 id: cmd-status
-title: "Command: zi status"
+title: "zi status"
 category: commands
 tags: [command, git, plugin, snippet, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

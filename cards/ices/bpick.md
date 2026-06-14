@@ -1,6 +1,6 @@
 ---
 id: bpick
-title: "Ice: bpick''"
+title: "bpick"
 category: ices
 tags: [ice, binary, git, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

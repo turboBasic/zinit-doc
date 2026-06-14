@@ -1,6 +1,6 @@
 ---
 id: pkg-any-node
-title: "Package: any-node"
+title: "any-node"
 category: packages
 tags: [package, annex, binary, command, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

@@ -1,6 +1,6 @@
 ---
 id: pkg-zsh
-title: "Package: zsh"
+title: "zsh"
 category: packages
 tags: [package, binary, command, git, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

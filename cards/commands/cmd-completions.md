@@ -1,6 +1,6 @@
 ---
 id: cmd-completions
-title: "Command: zi completions"
+title: "zi completions"
 category: commands
 tags: [command, completion]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

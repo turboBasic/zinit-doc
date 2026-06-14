@@ -1,6 +1,6 @@
 ---
 id: annex-test
-title: "Annex: test"
+title: "test"
 category: annexes
 tags: [annex, ice, plugin]
 source: https://github.com/zdharma-continuum/zinit-annex-test

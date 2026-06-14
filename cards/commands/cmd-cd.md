@@ -1,6 +1,6 @@
 ---
 id: cmd-cd
-title: "Command: zi cd"
+title: "zi cd"
 category: commands
 tags: [command, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

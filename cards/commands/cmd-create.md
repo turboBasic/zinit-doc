@@ -1,6 +1,6 @@
 ---
 id: cmd-create
-title: "Command: zi create"
+title: "zi create"
 category: commands
 tags: [command, plugin, git]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

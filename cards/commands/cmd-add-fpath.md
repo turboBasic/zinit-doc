@@ -1,6 +1,6 @@
 ---
 id: cmd-add-fpath
-title: "Command: zi add-fpath / zi fpath"
+title: "zi add-fpath / zi fpath"
 category: commands
 tags: [command, plugin, completion]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

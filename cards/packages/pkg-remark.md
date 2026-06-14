@@ -1,6 +1,6 @@
 ---
 id: pkg-remark
-title: "Package: remark"
+title: "remark"
 category: packages
 tags: [package, annex, binary, command, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

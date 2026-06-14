@@ -1,6 +1,6 @@
 ---
 id: ver
-title: "Ice: ver''"
+title: "ver"
 category: ices
 tags: [ice, git, binary, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

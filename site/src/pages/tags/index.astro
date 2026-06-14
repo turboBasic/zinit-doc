@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+const allDocs = await getCollection('docs');
+
+const tagCounts: Record<string, number> = {};
+for (const entry of allDocs) {
+  const tags: string[] = (entry.data as any).tags ?? [];
+  for (const tag of tags) {
+    tagCounts[tag] = (tagCounts[tag] ?? 0) + 1;
+  }
+}
+
+const tags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+---
+
+<StarlightPage frontmatter={{ title: 'Tags', description: 'All tags across the Zinit knowledge base.' }}>
+  <p>{tags.length} tags across {allDocs.length} cards.</p>
+  <ul class="tag-list">
+    {tags.map(([tag, count]) => (
+      <li>
+        <a href={`/tags/${tag}/`} class="tag-chip">{tag}</a>
+        <span class="count">{count}</span>
+      </li>
+    ))}
+  </ul>
+</StarlightPage>
+
+<style>
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .tag-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .tag-chip {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    background: var(--sl-color-gray-6);
+    border-radius: 0.25rem;
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+    font-size: var(--sl-text-sm);
+  }
+  .tag-chip:hover {
+    background: var(--sl-color-accent-low);
+    color: var(--sl-color-accent-high);
+  }
+  .count {
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-4);
+  }
+</style>

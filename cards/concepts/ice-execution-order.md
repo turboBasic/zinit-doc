@@ -1,5 +1,5 @@
 ---
-id: ice-order
+id: ice-execution-order
 title: "Ice Execution Order"
 category: concepts
 tags: [ice, turbo, performance]

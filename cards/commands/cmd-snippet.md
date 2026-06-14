@@ -1,6 +1,6 @@
 ---
 id: cmd-snippet
-title: "Command: zi snippet"
+title: "zi snippet"
 category: commands
 tags: [command, snippet, installation, migration]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

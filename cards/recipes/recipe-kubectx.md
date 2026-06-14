@@ -1,6 +1,6 @@
 ---
 id: recipe-kubectx
-title: "Recipe: kubectx"
+title: "kubectx"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

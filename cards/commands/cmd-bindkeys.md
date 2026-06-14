@@ -1,6 +1,6 @@
 ---
 id: cmd-bindkeys
-title: "Command: zi bindkeys"
+title: "zi bindkeys"
 category: commands
 tags: [command, plugin, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

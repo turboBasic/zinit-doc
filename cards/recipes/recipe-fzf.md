@@ -1,6 +1,6 @@
 ---
 id: recipe-fzf
-title: "Recipe: fzf"
+title: "fzf"
 category: recipes
 tags: [recipe, binary, command, completion, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

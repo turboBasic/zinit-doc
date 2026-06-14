@@ -1,6 +1,6 @@
 ---
 id: cloneonly
-title: "Ice: cloneonly''"
+title: "cloneonly"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

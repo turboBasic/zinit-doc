@@ -1,6 +1,6 @@
 ---
 id: has
-title: "Ice: has''"
+title: "has"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

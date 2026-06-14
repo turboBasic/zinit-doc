@@ -1,6 +1,6 @@
 ---
 id: cmd-cuninstall
-title: "Command: zi cuninstall"
+title: "zi cuninstall"
 category: commands
 tags: [command, completion, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

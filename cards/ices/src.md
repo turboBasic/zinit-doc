@@ -1,6 +1,6 @@
 ---
 id: src
-title: "Ice: src''"
+title: "src"
 category: ices
 tags: [ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

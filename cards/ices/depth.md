@@ -1,6 +1,6 @@
 ---
 id: depth
-title: "Ice: depth''"
+title: "depth"
 category: ices
 tags: [ice, git, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: recipe-neofetch
-title: "Recipe: neofetch"
+title: "neofetch"
 category: recipes
 tags: [recipe, command, installation]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

@@ -1,6 +1,6 @@
 ---
 id: cmd-delete
-title: "Command: zi delete"
+title: "zi delete"
 category: commands
 tags: [command, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

@@ -1,6 +1,6 @@
 ---
 id: annex-patch-dl
-title: "Annex: patch-dl"
+title: "patch-dl"
 category: annexes
 tags: [annex, ice, binary, installation]
 source: https://github.com/zdharma-continuum/zinit-annex-patch-dl

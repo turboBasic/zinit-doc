@@ -1,6 +1,6 @@
 ---
 id: recipe-docker
-title: "Recipe: Docker (buildx and credential helpers)"
+title: "Docker (buildx and credential helpers)"
 category: recipes
 tags: [recipe, binary, completion, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

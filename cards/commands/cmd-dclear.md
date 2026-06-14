@@ -1,6 +1,6 @@
 ---
 id: cmd-dclear
-title: "Command: zi dclear"
+title: "zi dclear"
 category: commands
 tags: [command, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

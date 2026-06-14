@@ -1,6 +1,6 @@
 ---
 id: link
-title: "Ice: link''"
+title: "link"
 category: ices
 tags: [ice, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

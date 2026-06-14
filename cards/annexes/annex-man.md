@@ -1,6 +1,6 @@
 ---
 id: annex-man
-title: "Annex: man"
+title: "man"
 category: annexes
 tags: [annex, plugin]
 source: https://github.com/zdharma-continuum/zinit-annex-man

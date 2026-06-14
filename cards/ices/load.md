@@ -1,6 +1,6 @@
 ---
 id: load
-title: "Ice: load''"
+title: "load"
 category: ices
 tags: [ice, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

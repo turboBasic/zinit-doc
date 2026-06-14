@@ -1,6 +1,6 @@
 ---
 id: cmd-edit
-title: "Command: zi edit"
+title: "zi edit"
 category: commands
 tags: [command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

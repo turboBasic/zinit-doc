@@ -1,6 +1,6 @@
 ---
 id: annex-meta-plugins
-title: "Annex: meta-plugins"
+title: "meta-plugins"
 category: annexes
 tags: [annex, plugin, package, installation]
 source: https://github.com/zdharma-continuum/zinit-annex-meta-plugins

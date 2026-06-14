@@ -1,6 +1,6 @@
 ---
 id: annex-submods
-title: "Annex: submods"
+title: "submods"
 category: annexes
 tags: [annex, ice, git, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit-annex-submods

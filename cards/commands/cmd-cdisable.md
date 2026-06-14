@@ -1,6 +1,6 @@
 ---
 id: cmd-cdisable
-title: "Command: zi cdisable"
+title: "zi cdisable"
 category: commands
 tags: [command, completion]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

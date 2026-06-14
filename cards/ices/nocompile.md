@@ -1,6 +1,6 @@
 ---
 id: nocompile
-title: "Ice: nocompile''"
+title: "nocompile"
 category: ices
 tags: [ice, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

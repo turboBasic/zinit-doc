@@ -1,10 +1,10 @@
 ---
 id: annex-rust
-title: "Annex: rust"
+title: "rust"
 category: annexes
 tags: [annex, ice, binary, command, installation]
 source: https://github.com/zdharma-continuum/zinit-annex-rust
-related: [annex-bin-gem-node, annex-bin-gem-node-sbin]
+related: [annex-bin-gem-node]
 ---
 
 ## Summary

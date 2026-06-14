@@ -1,6 +1,6 @@
 ---
 id: cmd-unload
-title: "Command: zi unload"
+title: "zi unload"
 category: commands
 tags: [command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

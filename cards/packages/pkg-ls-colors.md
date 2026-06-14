@@ -1,6 +1,6 @@
 ---
 id: pkg-ls-colors
-title: "Package: ls_colors"
+title: "ls_colors"
 category: packages
 tags: [package, plugin, completion, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

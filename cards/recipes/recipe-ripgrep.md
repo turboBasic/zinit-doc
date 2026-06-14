@@ -1,6 +1,6 @@
 ---
 id: recipe-ripgrep
-title: "Recipe: ripgrep"
+title: "ripgrep"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

@@ -1,6 +1,6 @@
 ---
 id: recipe-homebrew
-title: "Recipe: homebrew"
+title: "homebrew"
 category: recipes
 tags: [recipe, binary, command, completion, installation]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

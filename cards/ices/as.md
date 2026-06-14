@@ -1,6 +1,6 @@
 ---
 id: as
-title: "Ice: as''"
+title: "as"
 category: ices
 tags: [ice, command, completion, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

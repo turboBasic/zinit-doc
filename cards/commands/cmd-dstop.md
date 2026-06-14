@@ -1,6 +1,6 @@
 ---
 id: cmd-dstop
-title: "Command: zi dstop"
+title: "zi dstop"
 category: commands
 tags: [command, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

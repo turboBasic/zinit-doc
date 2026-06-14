@@ -1,6 +1,6 @@
 ---
 id: recipe-bat
-title: "Recipe: bat"
+title: "bat"
 category: recipes
 tags: [recipe, binary, command, installation, git]
 source: https://github.com/zdharma-continuum/zinit/wiki/Recipes-for-popular-programs

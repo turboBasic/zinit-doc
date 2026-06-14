@@ -1,6 +1,6 @@
 ---
 id: cmd-dreport
-title: "Command: zi dreport"
+title: "zi dreport"
 category: commands
 tags: [command, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

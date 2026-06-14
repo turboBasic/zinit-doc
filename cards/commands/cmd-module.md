@@ -1,6 +1,6 @@
 ---
 id: cmd-module
-title: "Command: zi module"
+title: "zi module"
 category: commands
 tags: [command, installation, performance]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

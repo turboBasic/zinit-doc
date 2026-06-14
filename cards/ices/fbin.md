@@ -1,6 +1,6 @@
 ---
 id: fbin
-title: "Ice: fbin''"
+title: "fbin"
 category: ices
 tags: [ice, binary, annex]
 source: https://github.com/zdharma-continuum/zinit-annex-bin-gem-node

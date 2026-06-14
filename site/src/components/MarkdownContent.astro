@@ -1,0 +1,114 @@
+---
+import '@astrojs/starlight/style/markdown.css';
+import { getCollection } from 'astro:content';
+
+const { starlightRoute } = Astro.locals;
+const data = starlightRoute?.entry?.data as {
+	source?: string;
+	related?: string[];
+	tags?: string[];
+} | undefined;
+
+// Build id→slug map once per page for related links
+let idToSlug: Record<string, string> = {};
+if (data?.related && data.related.length > 0) {
+	const allDocs = await getCollection('docs');
+	for (const entry of allDocs) {
+		// entry.id is the slug path like "ices/wait"
+		const parts = entry.id.split('/');
+		const cardId = parts[parts.length - 1];
+		idToSlug[cardId] = entry.id;
+	}
+}
+---
+
+<div class="sl-markdown-content"><slot /></div>
+
+{(data?.source || (data?.related && data.related.length > 0) || (data?.tags && data.tags.length > 0)) && (
+	<aside class="card-meta not-content">
+		{data?.tags && data.tags.length > 0 && (
+			<div class="meta-row">
+				<span class="meta-label">Tags</span>
+				<span class="meta-tags">
+					{data.tags.map(tag => (
+						<a href={`/tags/${tag}/`} class="tag-chip">{tag}</a>
+					))}
+				</span>
+			</div>
+		)}
+		{data?.source && (
+			<div class="meta-row">
+				<span class="meta-label">Source</span>
+				<a href={data.source} target="_blank" rel="noopener noreferrer" class="source-link">{data.source}</a>
+			</div>
+		)}
+		{data?.related && data.related.length > 0 && (
+			<div class="meta-row">
+				<span class="meta-label">See Also</span>
+				<span class="related-list">
+					{data.related.map(id => (
+						idToSlug[id]
+							? <a href={`/${idToSlug[id]}/`}>{id}</a>
+							: <span class="related-missing">{id}</span>
+					))}
+				</span>
+			</div>
+		)}
+	</aside>
+)}
+
+<style>
+	.card-meta {
+		margin-top: 2rem;
+		padding: 1rem 1.25rem;
+		border-top: 1px solid var(--sl-color-gray-6);
+		font-size: var(--sl-text-sm);
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.meta-row {
+		display: flex;
+		gap: 0.75rem;
+		align-items: baseline;
+		flex-wrap: wrap;
+	}
+	.meta-label {
+		color: var(--sl-color-gray-3);
+		font-weight: 600;
+		min-width: 5rem;
+		flex-shrink: 0;
+	}
+	.tag-chip {
+		display: inline-block;
+		padding: 0.15em 0.55em;
+		background: var(--sl-color-gray-6);
+		border-radius: 0.25rem;
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+		margin-inline-end: 0.25rem;
+	}
+	.tag-chip:hover {
+		background: var(--sl-color-accent-low);
+		color: var(--sl-color-accent-high);
+	}
+	.source-link {
+		word-break: break-all;
+		color: var(--sl-color-accent);
+	}
+	.related-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.5rem;
+	}
+	.related-list a {
+		font-family: var(--sl-font-mono, monospace);
+		font-size: 0.875em;
+		color: var(--sl-color-accent);
+	}
+	.related-missing {
+		font-family: var(--sl-font-mono, monospace);
+		font-size: 0.875em;
+		color: var(--sl-color-gray-4);
+	}
+</style>

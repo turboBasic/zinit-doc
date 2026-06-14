@@ -1,6 +1,6 @@
 ---
 id: cmd-cdlist
-title: "Command: zi cdlist"
+title: "zi cdlist"
 category: commands
 tags: [command, completion, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

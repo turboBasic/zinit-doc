@@ -1,6 +1,6 @@
 ---
 id: pick
-title: "Ice: pick''"
+title: "pick"
 category: ices
 tags: [ice, command, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

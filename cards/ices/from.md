@@ -1,6 +1,6 @@
 ---
 id: from
-title: "Ice: from''"
+title: "from"
 category: ices
 tags: [ice, git, installation, plugin]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md

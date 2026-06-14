@@ -1,6 +1,6 @@
 ---
 id: pkg-dircolors-material
-title: "Package: dircolors-material"
+title: "dircolors-material"
 category: packages
 tags: [package, plugin, completion, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

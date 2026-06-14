@@ -1,6 +1,6 @@
 ---
 id: pkg-fzy
-title: "Package: fzy"
+title: "fzy"
 category: packages
 tags: [package, binary, command, annex, installation]
 source: https://github.com/zdharma-continuum/zinit-packages

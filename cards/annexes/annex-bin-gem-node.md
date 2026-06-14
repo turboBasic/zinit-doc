@@ -1,10 +1,10 @@
 ---
 id: annex-bin-gem-node
-title: "Annex: bin-gem-node"
+title: "bin-gem-node"
 category: annexes
 tags: [annex, binary, command, package, ice]
 source: https://github.com/zdharma-continuum/zinit-annex-bin-gem-node
-related: [annex-bin-gem-node-sbin, annex-rust]
+related: [sbin, annex-rust]
 ---
 
 ## Summary
@@ -69,5 +69,5 @@ zi for \
 
 ## See Also
 
-- [annex-bin-gem-node-sbin](annex-bin-gem-node-sbin.md)
+- [sbin ice](../ices/sbin.md)
 - [annex-rust](annex-rust.md)

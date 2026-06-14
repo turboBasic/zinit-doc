@@ -1,0 +1,34 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'Zinit Knowledge Base',
+		description: 'Reference cards for Zinit, the Zsh plugin manager.',
+		template: 'splash',
+		hero: {
+			tagline: 'Reference cards covering ices, commands, concepts, annexes, and recipes.',
+			actions: [
+				{ text: 'Browse Ices', link: '/ices/wait/', icon: 'right-arrow' },
+				{ text: 'Browse Commands', link: '/commands/cmd-load/', icon: 'right-arrow', variant: 'minimal' },
+			],
+		},
+	}}
+>
+	<CardGrid>
+		<Card title="Ices" icon="list-format" href="/ices/aliases/">
+			Modifier flags like <code>wait</code>, <code>from</code>, <code>as</code> — the building blocks of every zi invocation.
+		</Card>
+		<Card title="Commands" icon="rocket" href="/commands/cmd-add-fpath/">
+			All <code>zi</code> / <code>zinit</code> commands: load, light, snippet, update, delete, and more.
+		</Card>
+		<Card title="Concepts" icon="information" href="/concepts/annexes-overview/">
+			Turbo mode, annexes, plugins vs snippets, the ice queue, and other architectural ideas.
+		</Card>
+		<Card title="Recipes" icon="document" href="/recipes/recipe-argocd/">
+			Copy-pasteable configs for popular programs: fzf, bat, ripgrep, starship, and more.
+		</Card>
+	</CardGrid>
+</StarlightPage>

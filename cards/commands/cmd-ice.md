@@ -1,6 +1,6 @@
 ---
 id: cmd-ice
-title: "Command: zi ice"
+title: "zi ice"
 category: commands
 tags: [command, ice, plugin, snippet]
 source: https://github.com/zdharma-continuum/zinit/blob/main/README.md
