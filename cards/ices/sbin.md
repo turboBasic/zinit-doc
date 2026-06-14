@@ -4,7 +4,7 @@ title: "Ice: sbin''"
 category: ices
 tags: [ice, binary, annex]
 source: https://github.com/zdharma-continuum/zinit-annex-bin-gem-node
-related: [fbin, annex-bin-gem-node, as, null]
+related: [fbin, annex-bin-gem-node, as, "null"]
 ---
 
 ## Summary

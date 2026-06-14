@@ -1,6 +1,6 @@
 ---
 id: ts-man-zinit-not-accessible-350
-title: "man zinit" command fails — man page not accessible
+title: '"man zinit" command fails — man page not accessible'
 category: troubleshooting
 tags: [troubleshooting, installation]
 source: https://github.com/zdharma-continuum/zinit/issues/350

@@ -1,6 +1,6 @@
 ---
 id: ts-zinit-ls-command-missing-670
-title: "zinit ls" and "zinit clist" — unknown subcommand errors
+title: '"zinit ls" and "zinit clist" — unknown subcommand errors'
 category: troubleshooting
 tags: [troubleshooting, command]
 source: https://github.com/zdharma-continuum/zinit/issues/670

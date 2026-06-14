@@ -1,6 +1,6 @@
 ---
 id: ts-update-single-line-missing-408
-title: zinit update fails with "no such file or directory: single-line.zsh"
+title: 'zinit update fails with "no such file or directory: single-line.zsh"'
 category: troubleshooting
 tags: [troubleshooting, installation, snippet]
 source: https://github.com/zdharma-continuum/zinit/issues/408

@@ -1,5 +1,5 @@
 ---
-id: null
+id: "null"
 title: "Ice: as'null'"
 category: ices
 tags: [ice, plugin, snippet]

@@ -1,6 +1,6 @@
 ---
 id: ts-curl-tcp-fastopen-298
-title: curl reports "option --tcp-fastopen: is unknown" when downloading snippets
+title: 'curl reports "option --tcp-fastopen: is unknown" when downloading snippets'
 category: troubleshooting
 tags: [snippet, troubleshooting, installation]
 source: https://github.com/zdharma-continuum/zinit/issues/298

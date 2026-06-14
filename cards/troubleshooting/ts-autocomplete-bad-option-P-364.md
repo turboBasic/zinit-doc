@@ -1,6 +1,6 @@
 ---
 id: ts-autocomplete-bad-option-P-364
-title: "_autocomplete.command:local:2: bad option: -P" error when using tab completion
+title: '"_autocomplete.command:local:2: bad option: -P" error when using tab completion'
 category: troubleshooting
 tags: [completion, troubleshooting, plugin]
 source: https://github.com/zdharma-continuum/zinit/issues/364

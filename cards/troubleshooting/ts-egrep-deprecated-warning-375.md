@@ -1,6 +1,6 @@
 ---
 id: ts-egrep-deprecated-warning-375
-title: "egrep: warning: egrep is obsolescent" during zinit update
+title: '"egrep: warning: egrep is obsolescent" during zinit update'
 category: troubleshooting
 tags: [troubleshooting, git]
 source: https://github.com/zdharma-continuum/zinit/issues/375

@@ -1,6 +1,6 @@
 ---
 id: ts-heroku-snippet-not-loaded-warning
-title: "Snippet not loaded (heroku)" warning when using trigger-load with sbin
+title: '"Snippet not loaded (heroku)" warning when using trigger-load with sbin'
 category: troubleshooting
 tags: [snippet, ice, troubleshooting, lazy-loading]
 source: https://github.com/zdharma-continuum/zinit/discussions/365

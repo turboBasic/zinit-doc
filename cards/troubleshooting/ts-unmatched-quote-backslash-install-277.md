@@ -1,6 +1,6 @@
 ---
 id: ts-unmatched-quote-backslash-install-277
-title: "Unmatched quote" error on startup from extraneous backslash in zinit-install.zsh
+title: '"Unmatched quote" error on startup from extraneous backslash in zinit-install.zsh'
 category: troubleshooting
 tags: [installation, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/issues/277
