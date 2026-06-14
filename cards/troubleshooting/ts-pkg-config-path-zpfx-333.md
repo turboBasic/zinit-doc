@@ -43,3 +43,7 @@ export PKG_CONFIG_PATH="$ZPFX/lib/pkg-config:$PKG_CONFIG_PATH"
 ## Caveats
 
 `$ZPFX` defaults to `~/.local/share/zinit/polaris`. If you set a custom `$ZPFX`, the path is updated accordingly.
+
+## Quality Notes
+
+Related card from the same issue (#333): `ts-make-uninstall-prefix-deletion-333` covers a distinct problem — `zinit delete` not cleaning up files installed to `$ZPFX` via `make install`.

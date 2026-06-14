@@ -46,3 +46,7 @@ ZINIT[MUTE_WARNINGS]=1
 ## Caveats
 
 Setting `MUTE_WARNINGS=1` hides legitimate warnings too. Only use it when the duplicate registration is intentional (rare).
+
+## Quality Notes
+
+Related: `ts-source-zshrc-slows-down-710` covers the underlying cause — re-sourcing `.zshrc` is unsupported and leads to cumulative slowdowns. Suppressing the warning does not fix the performance problem.

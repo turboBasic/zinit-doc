@@ -9,7 +9,7 @@ related: [ts-ghr-bpick-regression-243, ts-ghr-html-parsing-broken-373]
 
 ## Summary
 
-Using `bpick"nvim.appimage"` to download Neovim from GitHub releases fails after zinit switched from HTML scraping to API-based asset discovery. The asset exists but is filtered out by the asset pre-selection logic.
+Using `bpick"nvim.appimage"` to download Neovim from GitHub releases fails because zinit's automatic OS/arch pre-filter removes assets whose filenames contain no OS or architecture keywords before `bpick` can evaluate them. This applies to any asset with a non-standard name (e.g. `nvim.appimage`), not just Neovim.
 
 ## Symptom
 
@@ -22,7 +22,7 @@ The `nvim.appimage` file is present in the release but zinit cannot find it.
 
 ## Cause
 
-The asset pre-filtering step (which removes assets that don't match OS/arch patterns) was excluding `nvim.appimage` because the filename contains no OS or architecture keywords. `bpick` never gets to evaluate it. Fixed in PR #244 but the underlying tension between pre-filtering and non-standard asset names is ongoing.
+Zinit applies an OS/arch filter to the asset list before applying the `bpick` pattern. Assets without recognizable OS/arch tokens (`linux`, `darwin`, `amd64`, etc.) in their filename are dropped at the pre-filter stage — `bpick` never sees them. Fixed in PR #244 but the underlying tension between pre-filtering and non-standard asset names is ongoing.
 
 ## Fix / Workaround
 
@@ -32,7 +32,23 @@ Update zinit to get the asset filter fix:
 zinit self-update
 ```
 
-If still failing, work around by using `bpick` with a broader pattern and `mv` + `pick`:
+If still failing, use the `ghapi` ice to bypass the automatic platform filter entirely:
+
+```zsh
+zi ice from"gh-r" as"program" ghapi bpick"nvim.appimage" mv"nvim.appimage -> nvim"
+zi light neovim/neovim
+```
+
+Note: the `ghapi` ice requires network access to the GitHub API and counts against API rate limits.
+
+Or include a looser glob that still matches:
+
+```zsh
+zi ice from"gh-r" as"program" bpick"*nvim*appimage*"
+zi light neovim/neovim
+```
+
+Or use `bpick` with `mv` + `pick` and an explicit `ver`:
 
 ```zsh
 zinit ice from"gh-r" as"null" ver"latest" \

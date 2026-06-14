@@ -28,7 +28,7 @@ The zinit binary directory needs to be on the `main` branch (the default branch 
 ```zsh
 cd ~/.local/share/zinit/zinit.git   # adjust path if using a custom location
 git checkout main
-git branch -d master   # optional: remove old local branch
+git branch -D master   # optional: remove old local branch (force-delete since it may not be fully merged)
 ```
 
 Then `zinit self-update` should work again.

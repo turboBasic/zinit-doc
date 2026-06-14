@@ -41,7 +41,9 @@ Remove `ver'latest'` — it can fail if the latest release tag format changes. L
 
 **Question 1 — why compile?** No advantage over a package manager for tmux. The benefit is a declarative, version-pinnable config that travels with your dotfiles.
 
-**Question 2 — simplest approach with bgn shim:** Install tmux via your OS package manager, then use zinit only for plugins. If you want `sbin` for PATH management:
+**Simplest approach:** Install tmux via your OS package manager (Homebrew, apt) and let zinit manage only shell plugins. This avoids the compile overhead entirely.
+
+If you still want `sbin` for PATH management of other tools:
 
 ```zsh
 # For binaries that DO have gh-r pre-built releases (not tmux)

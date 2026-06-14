@@ -35,8 +35,15 @@ zinit light user/plugin
 
 `ver` is passed to `git checkout` after cloning, so any valid git ref works.
 
+With the `for` syntax (combining with other ices):
+
+```zsh
+zinit ice ver"v1.2.3" wait lucid
+zinit light some/plugin
+```
+
 ## Caveats
 
-Pinning to a commit SHA prevents `zinit update` from advancing to newer commits — the repo will stay at that SHA until the `ver` ice is removed or changed. To unpin, remove `ver` from the ice and run `zinit update <plugin>`.
-
-When using `from"gh-r"` (downloading a release binary), `ver` selects the release tag to download instead of controlling a git checkout.
+- Pinning to a commit SHA prevents `zinit update` from advancing to newer commits — the repo will stay at that SHA until the `ver` ice is removed or changed. To unpin, remove `ver` from the ice and run `zinit update <plugin>`.
+- `ver''` does not work with snippets.
+- When using `from"gh-r"` (downloading a release binary), `ver` selects the release tag to download instead of controlling a git checkout.

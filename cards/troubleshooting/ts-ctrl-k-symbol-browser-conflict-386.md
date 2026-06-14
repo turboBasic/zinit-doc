@@ -30,16 +30,29 @@ The issue is most reproducible inside tmux without powerlevel10k or a theme that
 Zinit bound `zi-browse-symbol` to Ctrl-K unconditionally. This conflicts with the standard `kill-line` binding. Fixed in PR #387 by reassigning the default key to Alt-Shift-Q.
 
 ## Fix / Workaround
-Update zinit to a version that includes PR #387 (`zinit self-update`). The symbol browser is now on Alt-Q (uppercase Q, i.e. Alt-Shift-Q) by default.
-
-To customize the key binding:
+Update zinit to a version that includes PR #387:
 
 ```zsh
-zstyle ':zinit:browse-symbol:key' key '^K'  # restore old binding if desired
+zinit self-update
+exec zsh
 ```
 
-To restore the standard Ctrl-K `kill-line` binding explicitly:
+The symbol browser is now on Alt-Q (uppercase Q, i.e. Alt-Shift-Q) by default.
+
+If still affected after updating, remove the `zi-browse-symbol` binding from Ctrl-K or disable it entirely:
 
 ```zsh
+# Remove the binding
+bindkey -r '^K'
+
+# Or restore kill-line explicitly
 bindkey '^K' kill-line
+
+# Or customize via zstyle before loading zinit
+zstyle ':zinit:browse-symbol:key' key '^[q'  # Alt-q
 ```
+
+## Caveats
+
+- The issue is most reproducible inside tmux without powerlevel10k or a theme that defines `zle-line-pre-redraw`.
+- The `zi-browse-symbol` widget requires a ctags index (`TAGS` file). Without it the widget always shows "Symbol index NOT found". If you never use ctags integration, disabling the binding entirely is the cleanest solution.

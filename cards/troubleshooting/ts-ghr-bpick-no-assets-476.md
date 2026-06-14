@@ -4,7 +4,7 @@ title: bpick ice finds no release assets from gh-r
 category: troubleshooting
 tags: [ice, binary, git, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/issues/476
-related: []
+related: [ts-ghr-bpick-no-assets-found-476]
 ---
 
 ## Summary
@@ -44,3 +44,7 @@ Use `*` wildcards broadly enough to cover the full filename, or use a negation p
 ## Caveats
 
 The `bpick` glob is matched against the full asset filename, not a substring. A pattern like `*.deb` requires the filename to end in `.deb`, which fails if the actual name is `powershell_7.3.2-1.deb_amd64.deb`.
+
+## Quality Notes
+
+Related: `ts-ghr-bpick-no-assets-found-476` covers a different cause of the same error — zinit's automatic OS/arch pre-filtering removing assets before `bpick` can evaluate them. That card's fix uses `ghapi` ice to bypass pre-filtering. This card covers the case where the glob simply doesn't match the exact filename.

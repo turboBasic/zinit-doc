@@ -46,3 +46,5 @@ zinit load user/plugin
 ## Caveats
 
 `proto"ssh"` does not work with `zinit snippet` (snippets use curl/wget, not git). The git URL rewrite approach is the most comprehensive as it affects all git-based operations including `zinit update`.
+
+Ensure your SSH key is added to `ssh-agent` before shell startup. If it is not, zinit will prompt for SSH credentials on every new terminal window when cloning or updating plugins.

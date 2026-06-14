@@ -1,7 +1,7 @@
 ---
 id: pattern-gh-r-binaries-batch
 title: "Show & Tell: Batch-installing multiple gh-r binaries with sbin"
-category: troubleshooting
+category: concepts
 tags: [binary, annex, ice, installation, turbo]
 source: https://github.com/zdharma-continuum/zinit/discussions/439
 related: [ts-as-null-completions-override, ts-bpick-compressed-file]

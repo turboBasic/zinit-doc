@@ -9,7 +9,7 @@ related: [ts-mv-ice-rename-file]
 
 ## Summary
 
-When loading a binary archive from a URL with `sbin` and then loading a companion OMZ snippet, zinit may show a "Snippet not loaded" warning if the two load directives share the same deferred load condition but have different `id-as` identifiers.
+When loading a binary archive from a URL with `sbin` and then loading a companion OMZ snippet, zinit may show a "Snippet not loaded" warning. This has two causes: (1) the two load directives share the same deferred `wait` condition but the snippet tracker has not yet registered the snippet when the status display runs; (2) the `id-as` identifier on the binary block collides with the auto-generated ID zinit assigns to the snippet.
 
 ## Question / Problem
 

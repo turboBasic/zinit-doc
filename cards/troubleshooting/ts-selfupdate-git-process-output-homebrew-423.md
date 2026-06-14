@@ -24,7 +24,13 @@ The file actually lives at `/opt/homebrew/opt/zinit/share/share/git-process-outp
 The Homebrew formula installs zinit's `share/` contents one level deeper than zinit's runtime path computation expects. The path concatenation produces `/opt/homebrew/opt/zinit/share/git-process-output.zsh` while the real location is `/opt/homebrew/opt/zinit/share/share/git-process-output.zsh`.
 
 ## Fix / Workaround
-Install zinit using the manual (non-Homebrew) method to avoid the path mismatch:
+Reinstall the Homebrew formula, which should place files in the correct location:
+
+```zsh
+brew reinstall zinit
+```
+
+If that doesn't resolve it, install zinit using the manual (non-Homebrew) method to avoid the path mismatch entirely:
 
 ```zsh
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -41,4 +47,5 @@ ln -s /opt/homebrew/opt/zinit/share/share/git-process-output.zsh \
 ```
 
 ## Caveats
-The symlink workaround is fragile and will need to be recreated after Homebrew upgrades zinit.
+- The symlink workaround is fragile and will need to be recreated after Homebrew upgrades zinit.
+- The Homebrew zinit formula has had path inconsistencies in some versions. The recommended installation method from the zinit README uses a direct git clone, which avoids Homebrew packaging issues.

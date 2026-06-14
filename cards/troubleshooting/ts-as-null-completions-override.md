@@ -54,6 +54,15 @@ zinit ice from"gh-r" as"null" sbin"**/bat" completions
 zinit light @sharkdp/bat
 ```
 
+**Option 4 — install man pages** for tools that bundle them in the release archive:
+
+```zsh
+zinit ice as"null" from"gh-r" sbin"**/bat" \
+    atclone"cp -vf bat/bat.1 $ZPFX/share/man/man1/" \
+    atpull"%atclone"
+zinit light @sharkdp/bat
+```
+
 ## Caveats
 
-Not all gh-r releases include completion files in the archive. Check the release asset contents first. Tools like `exa` may not include zsh completions in the GitHub release, requiring a separate snippet.
+Not all gh-r releases include completion files or man pages in the archive. Check the release asset contents first. Tools like `exa` may not include zsh completions in the GitHub release, requiring a separate snippet.

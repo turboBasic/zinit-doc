@@ -63,4 +63,6 @@ zinit as'null' wait lucid \
 
 ## Caveats
 
-`atclone` only runs once (at initial clone). If the externally-installed tool is updated and its init output changes, run `zinit update <id-as>` or manually delete the plugin directory to force re-generation.
+- `atclone` only runs once (at initial clone). If the externally-installed tool is updated and its init output changes, run `zinit update <id-as>` or manually delete the plugin directory to force re-generation.
+- The `if''` ice is evaluated at shell startup, so the tool must already be in `$PATH` at that point for the condition to pass. If the tool is managed by something that modifies `$PATH` lazily, the condition may fail even when the tool is installed.
+- An alternative to the caching pattern is to wrap the `eval` call in a small snippet file and load it directly: `zinit wait lucid light-mode for if"builtin command -v nox > /dev/null 2>&1" atinit"autoload -U bashcompinit; bashcompinit;" is-snippet $HOME/rc_files/nox.zsh` — simpler when caching is not needed.

@@ -1,7 +1,7 @@
 ---
 id: pattern-git-extensions-bgn
 title: "Show & Tell: Multiple git extension tools loaded in turbo with sbin shims"
-category: troubleshooting
+category: concepts
 tags: [binary, annex, turbo, git, performance]
 source: https://github.com/zdharma-continuum/zinit/discussions/391
 related: [ts-tmux-binary-bgn-shim, ts-cargo-binary-update]

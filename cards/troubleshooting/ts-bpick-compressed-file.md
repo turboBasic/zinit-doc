@@ -49,6 +49,14 @@ If the release provides a tarball variant, prefer matching the archive:
 bpick"*x86_64-linux*.tar.gz"
 ```
 
+For single raw binaries where `from"gh-r"` is unreliable, a direct snippet URL is simpler:
+
+```zsh
+zinit ice as"program" mv"dijo-x86_64-linux -> dijo"
+zinit snippet "https://github.com/nerdypepper/dijo/releases/latest/download/dijo-x86_64-linux"
+```
+
 ## Caveats
 
-Zinit auto-detects the OS and architecture when there is no `bpick`, selecting the most likely asset. If auto-detection fails, inspect the exact asset filenames on the GitHub Releases page and match them literally. Globs in `bpick` are standard zsh glob patterns.
+- Zinit auto-detects the OS and architecture when there is no `bpick`, selecting the most likely asset. If auto-detection fails, inspect the exact asset filenames on the GitHub Releases page and match them literally. Globs in `bpick` are standard zsh glob patterns.
+- `from"gh-r"` with `bpick` is best suited for assets that are archives. For single raw binaries, a direct snippet URL is simpler and more reliable.

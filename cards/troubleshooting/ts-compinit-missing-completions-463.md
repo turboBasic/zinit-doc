@@ -4,7 +4,7 @@ title: compinit reports missing completion files and shift count error on startu
 category: troubleshooting
 tags: [completion, troubleshooting, installation]
 source: https://github.com/zdharma-continuum/zinit/issues/463
-related: []
+related: [ts-compdef-replay-not-called-turbo-463]
 ---
 
 ## Summary
@@ -49,3 +49,7 @@ Then restart the shell or run `compinit` to regenerate the index.
 ## Caveats
 
 On Ubuntu/NixOS, a system-wide `compinit` call may run before your `.zshrc` and mask this error. Disable the system-wide call per the zinit README instructions.
+
+## Quality Notes
+
+Related: `ts-compdef-replay-not-called-turbo-463` covers a different completion problem from the same issue — completions missing in Turbo mode because `compinit`/`cdreplay` are called at the wrong time, not stale symlinks.

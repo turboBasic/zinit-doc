@@ -57,4 +57,6 @@ Steps to fix:
 
 ## Caveats
 
-Old installations used `~/.zinit/bin/` as the path. If migrating from the old zdharma org, the paths changed. Do not mix old and new path conventions in the same `.zshrc`.
+- Old installations used `~/.zinit/bin/` as the path. If migrating from the old zdharma org, the paths changed. Do not mix old and new path conventions in the same `.zshrc`.
+- Running zinit as root changes `$HOME` to `/root`, so plugin directories land under `/root/.local/share/zinit`. Permissions on `/root` may prevent git from creating subdirectories; ensure the zinit home directory is writable.
+- If partial clone directories remain from a previous failed attempt, remove them before retrying: `rm -rf ~/.local/share/zinit/plugins/zdharma-continuum*`

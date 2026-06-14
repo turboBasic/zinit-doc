@@ -59,3 +59,5 @@ zinit snippet zdharma-continuum/null
 ## Caveats
 
 `sbin` requires the `zinit-annex-bin-gem-node` annex. Without it, use `as"program"` and `pick"fnm"` instead.
+
+The generated `fnmenv.zsh` contains the path to the fnm binary at the time of generation. If the plugin directory changes (e.g. after `zinit delete` + reinstall), use `zinit update --reset Schniz/fnm` to force a full regeneration.

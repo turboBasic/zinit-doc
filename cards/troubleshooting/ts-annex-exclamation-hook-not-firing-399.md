@@ -4,7 +4,7 @@ title: Annex hooks with ! prefix do not fire (registered into wrong hash)
 category: troubleshooting
 tags: [annex, ice, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/issues/399
-related: [ts-annex-exclamation-hook-broken-399]
+related: []
 ---
 
 ## Summary
@@ -17,12 +17,12 @@ An annex hook that should run before `atclone`/`atpull` (indicated by `!` prefix
 PR #227 fixed `!` mark handling for normal hooks stored in `ZINIT_EXTS2` but did not modify the annex hook registration path that writes into `ZINIT_EXTS`. The `!` character was also subject to shell history expansion in that code path. Fixed in PR #399.
 
 ## Fix / Workaround
-Update zinit to include PR #399 (`zinit self-update`).
-
-Then update affected annexes:
+Update zinit and the affected annex:
 
 ```zsh
-zinit update zdharma-continuum/zinit-annex-patch-dl
+zinit self-update
+zinit update zdharma-continuum/zinit-annex-patch-dl  # or the affected annex
+exec zsh
 ```
 
 ## Examples
@@ -34,4 +34,4 @@ zi light user/project
 ```
 
 ## Caveats
-This fix is specifically required for annexes that explicitly register pre-execution hooks with `!`. Standard `atclone`/`atpull` ices are not affected.
+This fix is specifically required for annexes that explicitly register pre-execution hooks with `!` via `ZINIT_EXTS`. Standard ice mods (`atclone`, `atpull`, `make!`) are not affected by this bug.

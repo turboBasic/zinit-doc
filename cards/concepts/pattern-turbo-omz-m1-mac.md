@@ -1,7 +1,7 @@
 ---
 id: pattern-turbo-omz-m1-mac
 title: "Show & Tell: Full turbo .zshrc with OMZ libs on Apple Silicon"
-category: troubleshooting
+category: concepts
 tags: [turbo, snippet, completion, plugin, performance]
 source: https://github.com/zdharma-continuum/zinit/discussions/109
 related: [ts-homebrew-completions-fpath, ts-compinit-turbo-mode, ts-light-mode-performance]

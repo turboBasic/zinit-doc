@@ -4,7 +4,7 @@ title: Intermittent compinit errors on terminal launch
 category: troubleshooting
 tags: [completion, troubleshooting, turbo]
 source: https://github.com/zdharma-continuum/zinit/discussions/487
-related: []
+related: [ts-compinit-stray-completion-files]
 ---
 
 ## Summary
@@ -39,6 +39,8 @@ skip_global_compinit=1
 rm ~/.zcompdump*
 exec zsh
 ```
+
+5. **Stale completion symlinks**: if plugins were removed without `zinit delete`, their completion symlinks remain and cause `no such file or directory` errors. Fix with `zinit cclear`. See `ts-compinit-stray-completion-files`.
 
 ## Caveats
 The `blockf` ice prevents completion plugins from adding to `$fpath` directly; zinit manages `$fpath` instead. Without `blockf`, duplicate `$fpath` entries can trigger compinit warnings.

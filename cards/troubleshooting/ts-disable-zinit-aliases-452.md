@@ -4,7 +4,7 @@ title: Disabling zinit's built-in aliases (zi, zplg, zini)
 category: troubleshooting
 tags: [troubleshooting, installation]
 source: https://github.com/zdharma-continuum/zinit/issues/452
-related: [ts-zi-alias-conflict-276]
+related: [ts-zi-alias-conflict-276, ts-zi-alias-conflict-zoxide-312]
 ---
 
 ## Summary
@@ -13,7 +13,7 @@ Zinit automatically creates several aliases (`zi`, `zplg`, `zini`, `zpl`) pointi
 
 ## Symptom
 
-Conflicts such as `zi` being shadowed by zinit's alias, or existing shell functions named `zi` breaking after zinit is loaded.
+Conflicts such as `zi` being shadowed by zinit's alias, or existing shell functions named `zi` breaking after zinit is loaded. A common example: `zoxide` also creates a `zi` alias (`zoxide init zsh` adds `alias zi='cd'`), which gets overwritten by zinit's alias.
 
 ## Fix / Workaround
 
@@ -38,4 +38,6 @@ unalias zplg zpl zini 2>/dev/null  # keep only 'zi'
 
 ## Caveats
 
-When `NO_ALIASES=1` is set, all zinit shorthand aliases are disabled. You must type `zinit` in full for all commands. The setting must be in place before `source "${ZINIT_HOME}/zinit.zsh"` — it has no effect if set afterwards.
+- When `NO_ALIASES=1` is set, all zinit shorthand aliases are disabled. You must type `zinit` in full for all commands.
+- The setting must be in place before `source "${ZINIT_HOME}/zinit.zsh"` — it has no effect if set afterwards.
+- If you use other people's dotfile snippets that use `zi`, they will not work without adjusting.

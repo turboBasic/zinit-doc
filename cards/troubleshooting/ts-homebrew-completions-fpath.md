@@ -9,7 +9,7 @@ related: [ts-compinit-turbo-mode, ts-blockf-zsh-completions]
 
 ## Summary
 
-On macOS with Homebrew, completions for brew-installed tools live outside the default fpath. Adding those directories to `$fpath` before compinit is the correct approach alongside zinit.
+On macOS with Homebrew, completions for brew-installed tools live outside the default fpath. Adding those directories to `$fpath` before compinit is the correct approach alongside zinit. Zinit manages completions only for plugins and snippets it installs itself; there is no zinit-native way to register an external fpath directory.
 
 ## Question / Problem
 
@@ -45,4 +45,5 @@ zinit wait lucid for \
 
 ## Caveats
 
-`zinit blockf` prevents plugins from adding their own fpath entries. Use it with `zsh-completions` so zinit manages those completions. Do not use `blockf` if the plugin's completions should come from its own fpath entry.
+- On Apple Silicon, Homebrew uses `/opt/homebrew` as its prefix; on Intel Macs the prefix is `/usr/local`. Some tools install completions to one but not the other. Include both if you target both architectures.
+- `zinit blockf` prevents plugins from adding their own fpath entries. Use it with `zsh-completions` so zinit manages those completions. Do not use `blockf` if the plugin's completions should come from its own fpath entry.

@@ -59,3 +59,7 @@ zinit lucid wait atinit"zicompinit; zicdreplay" for \
 ## Caveats
 
 Do not call `compinit` directly in `.zshrc` if all completions are loaded in Turbo mode. Use `zicompinit` inside an `atload` or `atinit` hook instead.
+
+## Quality Notes
+
+Related: `ts-compinit-missing-completions-463` covers a different completion problem from the same issue — stale symlinks in the completions directory causing `compinit` errors on startup, not Turbo mode timing.

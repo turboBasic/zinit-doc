@@ -9,7 +9,7 @@ related: [ts-compinit-missing-completions-463]
 
 ## Summary
 
-Using `atpull'zinit creinstall -q .'` to refresh completions on plugin update creates broken symlinks in the zinit completions directory. The old symlinks are not removed before the new ones are created.
+Using `atpull'zinit creinstall -q .'` to refresh completions on plugin update creates broken symlinks in the zinit completions directory. Two related bugs were fixed in PR #453: (1) old symlinks were not removed before creating new ones, leaving stale entries when completion filenames changed; (2) `creinstall .` used a relative path based on `$PWD` at execution time, so symlinks created in the completions directory pointed to relative paths that didn't resolve correctly.
 
 ## Symptom
 
@@ -20,9 +20,15 @@ find ~/.local/share/zinit/completions -xtype l | wc -l
 # Returns a non-zero count of broken symlinks
 ```
 
+Symlinks may look like `_afew -> ./src/_afew` — relative paths that are relative to the completions directory rather than the plugin directory, so they never resolve. Tab completion for affected commands stops working.
+
 ## Cause
 
-Running `creinstall .` from within a plugin's directory during `atpull` creates new symlinks pointing to the updated completion files. However, if the plugin was updated and completion filenames changed, the old symlinks remain pointing to now-nonexistent files. Fixed in PR #453.
+Two bugs in `creinstall .` when called from an `atpull` hook:
+1. Old symlinks were not removed before creating new ones, leaving stale entries when completion filenames changed.
+2. The path was computed relative to `$PWD` (the plugin directory at execution time), but symlinks were created in the completions directory, so the relative source path no longer resolved.
+
+Both were fixed in PR #453 by cleaning up stale symlinks and switching to absolute paths.
 
 ## Fix / Workaround
 
@@ -50,6 +56,19 @@ The recommended pattern for zsh-completions with auto-refresh on update:
 zinit lucid wait light-mode for \
     blockf atpull'zinit creinstall -q .' \
   zsh-users/zsh-completions
+```
+
+As a workaround for older zinit versions, pass an explicit absolute path:
+
+```zsh
+zi ice blockf atpull'zinit creinstall -q "$PWD"'
+zi light zsh-users/zsh-completions
+```
+
+Or reinstall completions manually after an affected update:
+
+```zsh
+zinit creinstall zsh-users/zsh-completions
 ```
 
 ## Caveats

@@ -1,42 +1,58 @@
 ---
 id: ts-completions-ice-overrides-null-417
-title: completions ice forces completion install even when as"null" is set globally
+title: Completions not installed when using as'null' default-ice
 category: troubleshooting
 tags: [completion, ice, troubleshooting]
 source: https://github.com/zdharma-continuum/zinit/issues/417
-related: [ts-completions-ice-overrides-asnull-417]
+related: [ts-default-ice-global-annex-417]
 ---
 
 ## Summary
-When `default-ice` is set to `as'null'` (to suppress sourcing and completions by default), individual plugins that do provide completions need the `completions` ice to override the default and re-enable completion installation.
+
+When `as'null'` is set as a default ice (e.g. via `zinit default-ice`), completion detection is disabled globally. Individual plugins that provide completions need the `completions` ice to override this and re-enable completion installation.
 
 ## Symptom
-With `zinit default-ice as'null'` set globally, plugins that provide `_*` completion files have their completions silently skipped. Tab completion for those tools does not work.
 
-## Cause
-`as'null'` implies `nocompletions`. The `completions` ice was added (PR #417) as a way to explicitly re-enable completion detection and installation for individual plugins that are otherwise loaded with `as'null'`.
-
-## Fix / Workaround
-Add the `completions` ice to plugins that should have their completions installed despite a global `as'null'` default:
+Setting global defaults for gh-r downloads:
 
 ```zsh
-zinit default-ice as'null' lucid wait
+zinit default-ice --quiet as'null' from"gh-r" lbin'!' lucid nocompile
+```
 
-# This plugin's completions will be installed despite default as'null':
-zi ice completions
-zi light user/tool-with-completions
+Then loading a CLI tool that ships a completion file — the completion is never installed. `zinit csearch` shows no completions for the plugin. Tab completion for those tools does not work.
 
-# Without the completions ice, completions would be silently skipped:
-zi light user/tool-without-completions
+## Cause
+
+`as'null'` is a shorthand for `pick"/dev/null" nocompletions`. The `nocompletions` portion globally disables completion detection. Plugins loaded under this default ice do not have their completion files installed.
+
+## Fix / Workaround
+
+Add the `completions` ice to individual plugins that should have their completions installed. The `completions` ice explicitly overrides `nocompletions` (and `as'null'`):
+
+```zsh
+zinit default-ice --quiet as'null' from"gh-r" lbin'!' lucid nocompile
+
+# completions ice re-enables completion detection for this plugin
+zinit ice completions
+zinit light some-org/jira-cli
+```
+
+Or override the default-ice entirely for that plugin:
+
+```zsh
+zinit ice as"null" from"gh-r" lbin'!' lucid nocompile completions
+zinit light some-org/jira-cli
 ```
 
 ## Examples
 
 ```zsh
-# Example: go-jira-cli has completions that should be installed
-zi ice from"gh-r" completions
-zi light go-jira/jira
+# go-jira-cli has completions that should be installed
+zinit ice from"gh-r" completions
+zinit light go-jira/jira
 ```
 
 ## Caveats
-The `completions` ice requires zinit version that includes PR #417. Earlier versions have no way to override `as'null'`'s suppression of completion management.
+
+- The `completions` ice was added specifically to handle this use case (PR #417). Update zinit if this ice is not recognized.
+- The `completions` ice requires zinit version that includes PR #417. Earlier versions have no way to override `as'null'`'s suppression of completion management.

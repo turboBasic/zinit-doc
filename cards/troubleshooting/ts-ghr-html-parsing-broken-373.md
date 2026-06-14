@@ -17,7 +17,7 @@ After GitHub updated their release page HTML structure in September 2022, zinit'
 gh-r: failed to find the correct GitHub release asset to download.
 ```
 
-Appears for all `from"gh-r"` plugins, even ones that were working previously.
+Appears for all `from"gh-r"` plugins, even ones that were working previously. The plugin or binary is not downloaded even though assets are visible on the GitHub release page.
 
 ## Cause
 
@@ -34,14 +34,20 @@ zinit self-update
 Delete and re-download affected plugins:
 
 ```zsh
-zinit delete BurntSushi/ripgrep
-# restart shell
+zinit delete <user/repo>
+zinit load <user/repo>
 ```
 
 ## Caveats
 
-After the switch to the GitHub API, unauthenticated requests are rate-limited to 60 per hour. If you load many `gh-r` plugins in CI or on a shared IP, you may hit this limit. Set `GITHUB_API_TOKEN` in the environment to increase the limit:
+After the switch to the GitHub API, unauthenticated requests are rate-limited to 60 per hour. If you load many `gh-r` plugins in CI or on a shared IP, you may hit this limit. Set `GITHUB_API_TOKEN` in the environment to increase the limit to 5,000 requests/hour:
 
 ```zsh
+# Create a PAT at https://github.com/settings/tokens (no special scopes needed for public repos)
 export GITHUB_API_TOKEN="ghp_..."
 ```
+
+- A PAT with no additional scopes is sufficient for reading public release metadata.
+- The `GITHUB_API_TOKEN` environment variable name is the one zinit checks. Some tools use `GITHUB_TOKEN` — zinit may not read that variant.
+- Rate limit resets every hour.
+- Add the export to `.zshrc` (before zinit loads plugins) or to a secrets file sourced from `.zshrc`.

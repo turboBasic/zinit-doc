@@ -24,13 +24,21 @@ zinit load zdharma-continuum/null
 
 ## Answer / Solution
 
-The `cargo` ice (from `zinit-annex-rust`) installs crates at first load and does not automatically rebuild on `zinit update`. This is by design — cargo manages its own versioning and zinit does not know when a crate needs rebuilding.
+The `zdharma-continuum/null` pseudo-plugin has no real git history to pull, so zinit sees "no new commits" and skips the hook. The `cargo` ice (from `zinit-annex-rust`) installs crates at first load and does not automatically rebuild on `zinit update`. This is by design — cargo manages its own versioning and zinit does not know when a crate needs rebuilding.
 
 To force a rebuild of cargo-installed binaries:
 
 ```zsh
 zinit delete nullcargo   # removes the plugin directory
-exec zsh                 # next shell start re-runs the cargo install
+# re-declare ices before reloading:
+zinit ice id-as'nullcargo' cargo'fd <- !E:fd-find -> fd;rg <- !E:ripgrep -> rg;!E:bat -> bat'
+zinit load zdharma-continuum/null
+```
+
+Or simply restart the shell after deletion:
+
+```zsh
+exec zsh
 ```
 
 Or use `run-atpull` ice to force the cargo re-install on every update:
@@ -45,4 +53,4 @@ zinit load zdharma-continuum/null
 
 ## Caveats
 
-`run-atpull` causes cargo to reinstall on every `zi update`, which can be slow. Use it only if you need to always track the latest crate versions.
+`run-atpull` causes cargo to reinstall on every `zi update`, which can be slow. Consider setting this only for packages you actively want to keep at the latest crate version.

@@ -1,7 +1,7 @@
 ---
 id: pattern-termux-zinit-setup
 title: "Show & Tell: zinit setup for Termux on Android"
-category: troubleshooting
+category: concepts
 tags: [installation, snippet, completion, turbo, plugin]
 source: https://github.com/zdharma-continuum/zinit/discussions/466
 related: [ts-fzf-binary-keybindings-completion, ts-compinit-turbo-mode]

@@ -16,6 +16,7 @@ Running `zi update --all` and seeing a flood of `command not found: ∞zinit-res
 After running `zi update --all --verbose`, a user saw errors for every plugin:
 
 ```
+.zinit-update-or-status-snippet:24: command not found: .zinit-update-snippet
 .zinit-update-or-status:241: command not found: ∞zinit-reset-hook
 Warning: ∞zinit-reset-hook hook returned with 127
 .zinit-update-or-status:288: command not found: ∞zinit-atpull-e-hook
@@ -32,7 +33,15 @@ The `∞zinit-*-hook` functions are provided by zinit annexes (`zinit-annex-bin-
 
 The fix is to ensure annexes are loaded before `zinit update` runs its hooks. This normally happens automatically when zinit is sourced in `.zshrc`. The errors appear because `update --all` runs in a subprocess that may not have the annexes sourced.
 
-**Workaround**: run `exec zsh` after `zinit update --all` to reload with fresh annex state. If errors persist on interactive reload, check that annex loading is not inside a `wait` block:
+**Workaround**: run `exec zsh` after `zinit update --all` to reload with fresh annex state. If errors persist after `exec zsh`, the compiled `.zwc` bytecode may be stale from an older version; delete it and recompile:
+
+```zsh
+zinit uncompile --all
+zinit self-update
+exec zsh
+```
+
+If errors persist on interactive reload, check that annex loading is not inside a `wait` block:
 
 ```zsh
 # Annexes must be loaded WITHOUT turbo (no wait ice)

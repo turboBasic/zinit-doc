@@ -26,7 +26,18 @@ zinit ice wait lucid from"gh-r" \
     sbin \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion;
        https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh;
+       https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/share/man/man1/fzf-tmux.1;
        https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/share/man/man1/fzf.1'
+zinit light junegunn/fzf
+```
+
+**Without any annex (single block via `atclone`/`atpull`):**
+
+```zsh
+zinit ice as"command" from"gh-r" \
+    atclone"./fzf --zsh > fzf.zsh" \
+    atpull"%atclone" \
+    src"fzf.zsh" sbin"fzf"
 zinit light junegunn/fzf
 ```
 
@@ -53,4 +64,4 @@ zinit wait lucid is-snippet for \
 
 ## Caveats
 
-The `dl` ice requires `zinit-annex-patch-dl` loaded without turbo. The paths inside `dl` for man pages use `$ZPFX` which defaults to `~/.local/share/zinit/polaris`.
+The `dl` ice requires `zinit-annex-patch-dl` loaded without turbo. The paths inside `dl` for man pages use `$ZPFX` which defaults to `~/.local/share/zinit/polaris`. The `atclone`/`atpull` approach works without any annex.

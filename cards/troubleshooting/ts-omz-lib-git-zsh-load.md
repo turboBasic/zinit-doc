@@ -57,6 +57,10 @@ zinit wait lucid for \
     OMZP::git
 ```
 
+## Caveats
+
+`OMZL::` is for individual files in `ohmyzsh/lib/`. If a library file itself sources other files or uses relative paths, those dependencies will not be resolved automatically. For multi-file OMZ libraries, loading the whole `OMZP` plugin (which bundles its dependencies) is often simpler.
+
 ## See Also
 
 - [ts-omz-theme-git-errors](#) — error `command not found: git_prompt_status` when git lib is missing

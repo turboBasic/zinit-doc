@@ -4,7 +4,7 @@ title: "Repeated source ~/.zshrc gets progressively slower"
 category: troubleshooting
 tags: [performance, troubleshooting, plugin]
 source: https://github.com/zdharma-continuum/zinit/issues/710
-related: []
+related: [ts-zinit-mute-warnings-plugin-registered]
 ---
 
 ## Summary
@@ -37,3 +37,7 @@ zinit load username/plugin
 ## Caveats
 
 `source ~/.zshrc` in a live session is inherently unsupported — it accumulates duplicate entries and does not run the zinit unload hooks. Always use `exec zsh` to reload configuration.
+
+## Quality Notes
+
+Related: `ts-zinit-mute-warnings-plugin-registered` covers a symptom that often appears alongside repeated sourcing — the "plugin already registered" warning — and how to suppress it with `ZINIT[MUTE_WARNINGS]`.

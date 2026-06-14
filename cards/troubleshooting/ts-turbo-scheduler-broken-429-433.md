@@ -4,7 +4,7 @@ title: Turbo mode stops loading plugins after scheduler performance change
 category: troubleshooting
 tags: [turbo, plugin, troubleshooting, performance]
 source: https://github.com/zdharma-continuum/zinit/issues/433
-related: [ts-turbo-broken-scheduler-429]
+related: []
 ---
 
 ## Summary
@@ -21,9 +21,18 @@ Update zinit to a version that includes the revert (PR #432):
 
 ```zsh
 zinit self-update
+exec zsh
 ```
 
-If you cannot update, remove the performance patch by reverting the scheduler logic. The revert is included in any zinit version after the `released` tag on PR #432.
+Or pull directly from the git checkout:
+
+```zsh
+cd ~/.local/share/zinit/zinit.git
+git pull
+exec zsh
+```
+
+If updating is not possible, replacing `wait"0"` with `wait"1"` may work with the broken scheduler, though this is not guaranteed.
 
 ## Caveats
 This regression only affected macOS ARM (Apple Silicon) systems running zsh 5.9. Linux and Intel Mac users may not have been affected.

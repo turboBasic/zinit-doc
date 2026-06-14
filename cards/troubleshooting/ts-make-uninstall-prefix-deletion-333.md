@@ -50,3 +50,7 @@ With `--prefix=$PWD`, `zinit delete` removes everything since it's all inside th
 ## Caveats
 
 `--prefix=$PWD` means `$ZPFX/bin` is not used. You must add the plugin's own `bin/` directory to `$PATH` using `as"program" pick"bin/*"` or the `sbin` ice from `zinit-annex-bin-gem-node`.
+
+## Quality Notes
+
+Related card from the same issue (#333): `ts-pkg-config-path-zpfx-333` covers a distinct problem — libraries installed to `$ZPFX` not being found by `pkg-config` during builds.

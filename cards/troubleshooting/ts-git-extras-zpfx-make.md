@@ -55,4 +55,6 @@ zinit light tj/git-extras
 
 ## Caveats
 
-`pick"$ZPFX/bin/git-*"` selects files from the install prefix, not the plugin clone directory. The file will not exist until `make install` has run at least once. On first load zinit runs `make` then sources the `pick` target, so the sequence is correct as long as the `install` target is named.
+- `pick"$ZPFX/bin/git-*"` selects files from the install prefix, not the plugin clone directory. The file will not exist until `make install` has run at least once. On first load zinit runs `make` then sources the `pick` target, so the sequence is correct as long as the `install` target is named.
+- `$ZPFX` defaults to `~/.local/share/zinit/polaris`. Zinit creates `$ZPFX` but may not pre-create subdirectories. If `$ZPFX/bin` remains empty after install, force a clean reinstall: `zinit delete tj/git-extras`, then re-source `.zshrc`.
+- `$ZPFX/bin` is automatically prepended to `$PATH` by zinit. If the directory does not exist yet when `$PATH` is set, commands installed there later in the session will be found on the next shell start.
