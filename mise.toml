@@ -1,0 +1,4 @@
+[tools]
+node = "26"
+just = "latest"
+wrangler = "latest"
