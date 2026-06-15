@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zinit-kb": {
+      "command": "mise",
+      "args": ["exec", "--", "node", "./mcp/server.js"]
+    }
+  }
+}

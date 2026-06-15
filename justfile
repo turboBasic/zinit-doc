@@ -25,6 +25,10 @@ preview: build
 publish: build
     mise exec -- wrangler pages deploy {{site}}/dist --project-name {{cf_project}} --branch main
 
+# Install MCP server dependencies
+mcp-install:
+    cd mcp && mise exec -- npm install
+
 # Remove build artifacts
 clean:
     rm -rf {{site}}/dist {{site}}/.astro

@@ -7,3 +7,4 @@ site/.astro/
 site/src/assets/houston.webp
 site/.vscode/
 .wrangler/
+mcp/node_modules/
