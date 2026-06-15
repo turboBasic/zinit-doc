@@ -7,5 +7,6 @@
     "**/Thumbs.db": true,
     "**/.git disable exclusion of .git": true
   },
-  "hide-files.files": []
+  "hide-files.files": [],
+  "cSpell.enabled": true
 }

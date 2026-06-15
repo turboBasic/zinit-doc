@@ -1,0 +1,31 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["zinit"],
+  "dictionaryDefinitions": [
+    {
+      "name": "zinit",
+      "path": ".cspell/zinit.txt",
+      "addWords": true
+    }
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "site/node_modules",
+    "site/.astro",
+    "site/dist",
+    "package-lock.json",
+    ".git"
+  ],
+  "files": [
+    "cards/**/*.md",
+    "docs/**/*.md",
+    "site/src/**/*.{astro,ts,mjs}",
+    "*.md"
+  ],
+  "ignoreRegExpList": [
+    "/^id:.*$/gm",
+    "/^source:.*$/gm",
+    "/^related:.*$/gm"
+  ]
+}
