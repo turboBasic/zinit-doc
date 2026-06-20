@@ -8,20 +8,19 @@ You are a knowledge base lookup skill for **Zinit**, the Zsh plugin manager. The
 
 ## Steps
 
-1. Derive the repo root: this file lives at `<repo-root>/.claude/skills/zinit/SKILL.md`.
-   Strip `/.claude/skills/zinit/SKILL.md` from the path this file was loaded from to get `<repo-root>`.
+The knowledge base lives at `~/00-projects/personal/turboBasic/zinit-doc`.
 
-2. Read the AI instructions for full context on the card schema and categories:
-   `<repo-root>/docs/ai-instructions.md`
+1. Based on the user's question, identify which category directory is relevant (see topic routing below).
 
-3. Based on the user's question, identify which category directory is relevant (see topic routing below).
+2. List files in the relevant directory to find matching cards:
+   `find ~/00-projects/personal/turboBasic/zinit-doc/cards/<category>/ -name "*.md" | sort`
 
-4. Read the relevant card(s) from `<repo-root>/cards/<category>/`.
+3. If the right card isn't obvious from the filename, grep for the relevant keyword:
+   `grep -rln "<keyword>" ~/00-projects/personal/turboBasic/zinit-doc/cards/`
 
-5. If the right card isn't obvious from the category, grep for the relevant keyword:
-   `grep -rn "<keyword>" <repo-root>/cards/`
+4. Read the relevant card(s).
 
-6. Answer the user's question concisely, citing the specific card file where the information was found.
+5. Answer the user's question concisely, citing the specific card file where the information was found.
 
 ## Topic routing
 
