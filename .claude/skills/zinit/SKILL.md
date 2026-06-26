@@ -8,15 +8,15 @@ You are a knowledge base lookup skill for **Zinit**, the Zsh plugin manager. The
 
 ## Steps
 
-The knowledge base lives at `~/00-projects/personal/turboBasic/zinit-doc`.
+The knowledge base lives at the skill's repo root, `${CLAUDE_SKILL_DIR}/../../..`.
 
 1. Based on the user's question, identify which category directory is relevant (see topic routing below).
 
 2. List files in the relevant directory to find matching cards:
-   `find ~/00-projects/personal/turboBasic/zinit-doc/cards/<category>/ -name "*.md" | sort`
+   `find ${CLAUDE_SKILL_DIR}/../../../cards/<category>/ -name "*.md" | sort`
 
 3. If the right card isn't obvious from the filename, grep for the relevant keyword:
-   `grep -rln "<keyword>" ~/00-projects/personal/turboBasic/zinit-doc/cards/`
+   `grep -rln "<keyword>" ${CLAUDE_SKILL_DIR}/../../../cards/`
 
 4. Read the relevant card(s).
 
